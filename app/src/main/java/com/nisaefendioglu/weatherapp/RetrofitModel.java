@@ -1,55 +1,89 @@
 package com.nisaefendioglu.weatherapp;
 
+import java.util.ArrayList;
 import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 
-public class RetrofitModel {
-
-    @SerializedName("id")
-    @Expose
-    private Integer id;
+class RetrofitModel {
+    @SerializedName("coord")
+    public Coord coord;
+    @SerializedName("sys")
+    public Sys sys;
+    @SerializedName("weather")
+    public ArrayList<Weather> weather = new ArrayList<Weather>();
     @SerializedName("main")
-    @Expose
-    private String main;
+    public Main main;
+    @SerializedName("wind")
+    public Wind wind;
+    @SerializedName("rain")
+    public Rain rain;
+    @SerializedName("clouds")
+    public Clouds clouds;
+    @SerializedName("dt")
+    public float dt;
+    @SerializedName("id")
+    public int id;
+    @SerializedName("name")
+    public String name;
+    @SerializedName("cod")
+    public float cod;
+}
+
+class Weather {
+    @SerializedName("id")
+    public int id;
+    @SerializedName("main")
+    public String main;
     @SerializedName("description")
-    @Expose
-    private String description;
+    public String description;
     @SerializedName("icon")
-    @Expose
-    private String icon;
+    public String icon;
+}
 
-    public Integer getId() {
-        return id;
-    }
+class Clouds {
+    @SerializedName("all")
+    public float all;
+}
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+class Rain {
+    @SerializedName("3h")
+    public float h3;
+}
 
-    public String getMain() {
-        return main;
-    }
+class Wind {
+    @SerializedName("speed")
+    public float speed;
+    @SerializedName("deg")
+    public float deg;
+}
 
-    public void setMain(String main) {
-        this.main = main;
-    }
+class Main {
+    @SerializedName("temp")
+    public float temp;
+    @SerializedName("humidity")
+    public float humidity;
+    @SerializedName("pressure")
+    public float pressure;
+    @SerializedName("temp_min")
+    public float temp_min;
+    @SerializedName("temp_max")
+    public float temp_max;
+}
 
-    public String getDescription() {
-        return description;
-    }
+class Sys {
+    @SerializedName("country")
+    public String country;
+    @SerializedName("sunrise")
+    public long sunrise;
+    @SerializedName("sunset")
+    public long sunset;
+}
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getIcon() {
-        return icon;
-    }
-
-    public void setIcon(String icon) {
-        this.icon = icon;
-    }
-
+class Coord {
+    @SerializedName("lon")
+    public float lon;
+    @SerializedName("lat")
+    public float lat;
 }
