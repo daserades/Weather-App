@@ -3,6 +3,7 @@ package com.nisaefendioglu.weatherapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
@@ -23,9 +24,8 @@ public class MainActivity extends AppCompatActivity {
     private static Retrofit retrofit = null;
     public static final String BASE_URL = "http://api.openweathermap.org/";
     public static String APIKey = "3f8c9db425f5691cb59026f85546237e";
-    public static String lat ="35";
-    public static String lon = "139";
-
+    public static String lat ="41.015137";
+    public static String lon = "28.979530";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         searchView = (SearchView) findViewById(R.id.searchView);
         weatherData = (TextView) findViewById(R.id.weatherData);
+
         getClient();
 
     }
@@ -50,17 +51,19 @@ public class MainActivity extends AppCompatActivity {
                     if(response.code()==200){
                         RetrofitModel retrofitModel = response.body();
                         assert retrofitModel !=null;
-
+                        double temp = retrofitModel.main.temp - 273.15;
+                        int tempToInt = (int)temp;
                         String strWeather =
-                                "Country: " + retrofitModel.sys.country + " " +
-                                "Temp: " + retrofitModel.main.temp + " " +
-                                "Temp(Max): " + retrofitModel.main.temp_max + " " +
-                                "Temp(Min): " + retrofitModel.main.temp_min + " " +
-                                "Humidity: " + retrofitModel.main.humidity + " " +
-                                "Pressure: " + retrofitModel.main.pressure;
+                              //"Bulut: " + retrofitModel.weather.description + "\n" + //column yetersiz
+                                "Ülke: " + retrofitModel.sys.country + "\n" +
+                                "Yer: " + retrofitModel.name + "\n" +
+                                "Sıcaklık: " + tempToInt + "°C" + "\n" +
+                                "Nem Oranı: " + retrofitModel.main.humidity + "\n" +
+                                "Basınç Oranı: " + retrofitModel.main.pressure;
 
 
                         weatherData.setText(strWeather);
+
 
                     }
                 }
