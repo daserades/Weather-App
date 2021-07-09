@@ -28,7 +28,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="440dp"
         android:layout_marginRight="20dp"
-        android:background="#ff793f"
+        android:background="@drawable/listgrad"
         android:textSize="20dp" />
 
     <TextView
@@ -39,7 +39,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:textSize="20dp"
-        android:background="#EAD30C"
+        android:background="@drawable/listgrad"
 
         />
 
@@ -50,7 +50,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="200dp"
         android:layout_marginRight="20dp"
-        android:background="#ff793f"
+        android:background="@drawable/listgrad"
         android:textSize="20dp"
 
         />
