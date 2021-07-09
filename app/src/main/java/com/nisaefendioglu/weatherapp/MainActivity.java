@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                         int tempToInt = (int) temp;
                         String strWeather =
                                 //"Bulut: " + retrofitModel.weather.description + "\n" + //column yetersiz
-                                "Ülke: " + retrofitModel.sys.country + "\n" +
+                                        "Ülke: " + retrofitModel.sys.country + "\n" +
                                         "Yer: " + retrofitModel.name + "\n" +
                                         "Sıcaklık: " + tempToInt + "°C" + "\n" +
                                         "Nem Oranı: " + retrofitModel.main.humidity + "\n" +
