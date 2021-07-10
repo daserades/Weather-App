@@ -54,4 +54,6 @@ class Coord {
     public float lon;
     @SerializedName("lat")
     public float lat;
+
 }
+

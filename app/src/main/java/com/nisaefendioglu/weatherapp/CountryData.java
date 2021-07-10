@@ -6,6 +6,27 @@ import java.util.Map;
 
 public class CountryData {
 
+    @SerializedName("list")
+    private String list;
+    private String country;
+    private String name;
+    private String temp;
+
+    public CountryData(String list, String country, String name, String temp) {
+        this.list = list;
+        this.country = country;
+        this.name = name;
+        this.temp = temp;
+    }
+
+    public String getList() {
+        return list;
+    }
+
+    public void setList(String list) {
+        this.list = list;
+    }
+
     public String getCountry() {
         return country;
     }
@@ -14,41 +35,19 @@ public class CountryData {
         this.country = country;
     }
 
-    @SerializedName("list")
-    private String country;
-
-    public String getTemperature() {
-        return temperature;
+    public String getName() {
+        return name;
     }
 
-    public void setTemperature(String temperature) {
-        this.temperature = temperature;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public CountryData(String country, String temperature, Map<String, String> list) {
-        this.country = country;
-        this.temperature = temperature;
-        this.list = list;
+    public String getTemp() {
+        return temp;
     }
 
-    private String temperature;
-
-    public CountryData(String country, Map<String, String> list) {
-        this.country = country;
-        this.list = list;
-    }
-
-    private Map<String, String> list;
-
-    public Map<String, String> getList() {
-        return list;
-    }
-
-    public void setList(Map<String, String> list) {
-        this.list = list;
-    }
-
-    public CountryData(Map<String, String> list) {
-        this.list = list;
+    public void setTemp(String temp) {
+        this.temp = temp;
     }
 }

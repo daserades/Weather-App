@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="7dp"
-        android:layout_marginHorizontal="12dp">
+        android:layout_marginHorizontal="15dp">
 
 
     <TextView
@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_alignParentStart="true"
-        android:layout_marginEnd="12dp"
+        android:layout_marginEnd="30dp"
         android:textColor="@color/black"
         android:text="Türkiye"
         android:layout_centerVertical="true"
@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="12dp"
+        android:layout_marginEnd="30dp"
         android:textColor="@color/black"
         android:text="Temperature"
         android:layout_centerVertical="true"

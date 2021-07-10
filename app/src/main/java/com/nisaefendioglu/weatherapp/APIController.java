@@ -1,14 +1,14 @@
 package com.nisaefendioglu.weatherapp;
 
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.http.GET;
-import retrofit2.http.Query;
 
 public interface APIController {
-    @GET("data/2.5/weather?")
-    Call<RetrofitModel> getWeatherData(@Query("lat") String lat, @Query("lon") String lon, @Query("cnt") String cnt , @Query("APIKey") String apiKey);
 
-    //  @GET("2.5/find?lat={lat}&lon={lon}&cnt={cnt}&appid={API key}")
-    //    Call<RetrofitModel> getWeatherData(@Query("lat") String lat, @Query("lon") String lon, @Query("cnt") String cnt , @Query("APIKey") String apiKey);
-    //
+    String BASE_URL = "https://api.openweathermap.org/";
+    @GET("data/2.5/find?lat=55.5&lon=37.5&cnt=10&appid=3f8c9db425f5691cb59026f85546237e")
+    Call<List<CountryData>> getCountryData();
+
 }

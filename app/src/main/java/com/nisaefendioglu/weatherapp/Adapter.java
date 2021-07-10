@@ -26,6 +26,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.AdapterViewHolder> {
         this.list = list;
     }
 
+
     @NonNull
     @Override
     public AdapterViewHolder onCreateViewHolder(@NonNull  ViewGroup parent, int viewType) {
@@ -37,9 +38,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.AdapterViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull  Adapter.AdapterViewHolder holder, int position) {
         CountryData data = list.get(position);
-
         holder.countryName.setText(data.getCountry());
-        holder.temperature.setText(data.getTemperature());
+        holder.temperature.setText(NumberFormat.getInstance().format(Integer.parseInt(data.getTemp())));
     }
 
     @Override
