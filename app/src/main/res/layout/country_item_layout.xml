@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="3dp"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginTop="8dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="7dp"
+        android:layout_marginHorizontal="12dp">
+
+
+    <TextView
+        android:id="@+id/countryName"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="12dp"
+        android:textColor="@color/black"
+        android:text="Türkiye"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textSize="15dp" ></TextView>
+
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="12dp"
+        android:textColor="@color/black"
+        android:text="Temperature"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textSize="15dp" ></TextView>
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>
