@@ -20,13 +20,18 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 
 public class MainActivity extends AppCompatActivity {
+
+    public static String APIKey = "3f8c9db425f5691cb59026f85546237e";
+    public static String lat ="35";
+    public static String lon = "139";
     private RecyclerView recyclerView;
-    private List<CountryData> list;
+    private List<RetrofitModel> list;
     SearchView searchView;
     RecyclerView countries;
     TextView countryName, temperature;
     ImageView image;
     private static Retrofit retrofit = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
 
         list = new ArrayList<>();
         recyclerView = findViewById(R.id.countries);
-        list = new ArrayList<CountryData>();
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
@@ -51,12 +55,11 @@ public class MainActivity extends AppCompatActivity {
         Adapter adapter = new Adapter(this, list);
         recyclerView.setAdapter(adapter);
 
-        ApiUtilities.getApiInterface().getCountryData().enqueue(new Callback<List<CountryData>>(){
-
+        ApiUtilities.getApiInterface().getCountryData(lat,lon, APIKey).enqueue(new Callback<RetrofitModel>(){
             @Override
-            public void onResponse(Call<List<CountryData>> call, Response<List<CountryData>> response) {
+            public void onResponse(Call<RetrofitModel> call, Response<RetrofitModel> response) {
                 if (response.code() == 200) {
-                    RetrofitModel retrofitModel = (RetrofitModel) response.body();
+                    RetrofitModel retrofitModel = response.body();
                     assert retrofitModel != null;
                     double temp = retrofitModel.main.temp - 273.15;
                     int tempToInt = (int) temp;
@@ -71,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<List<CountryData>> call, Throwable t) {
+            public void onFailure(Call<RetrofitModel> call, Throwable t) {
 
             }
         });
