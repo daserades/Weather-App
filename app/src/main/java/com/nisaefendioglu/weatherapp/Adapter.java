@@ -19,9 +19,9 @@ import java.util.List;
 public class Adapter extends RecyclerView.Adapter<Adapter.AdapterViewHolder> {
 
     private Context context;
-    private List<RetrofitModel> list;
+    private List<CountryData> list;
 
-    public Adapter(Context context, List<RetrofitModel> list) {
+    public Adapter(Context context, List<CountryData> list) {
         this.context = context;
         this.list = list;
     }
@@ -37,7 +37,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.AdapterViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull  Adapter.AdapterViewHolder holder, int position) {
-        RetrofitModel data = list.get(position);
+        CountryData data = list.get(position);
         holder.countryName.setText(data.getCountry());
         holder.temperature.setText(NumberFormat.getInstance().format(Integer.parseInt(data.getTemp())));
     }
