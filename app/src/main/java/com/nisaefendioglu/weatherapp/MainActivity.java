@@ -11,6 +11,7 @@ import android.widget.SearchView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import retrofit2.Call;
@@ -59,14 +60,11 @@ public class MainActivity extends AppCompatActivity {
                     assert retrofitModel != null;
                     double temp = retrofitModel.main.temp - 273.15;
                     int tempToInt = (int) temp;
-                    String country =
-                            "Country: " + retrofitModel.sys.country;
 
+                    String country = retrofitModel.sys.country;
                     countryName.setText(country);
 
-                    String temperatures =
-                            "Temperature: " + tempToInt + "°C";
-
+                    String temperatures = tempToInt + "°C";
                     temperature.setText(temperatures);
 
                 }
