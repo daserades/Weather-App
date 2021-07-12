@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.TextView;
@@ -22,7 +23,6 @@ public class ActivityFragment extends Fragment {
         ImageView imageView = viewGroup.findViewById(R.id.image);
         TextView text = viewGroup.findViewById(R.id.text);
         RecyclerView countries = viewGroup.findViewById(R.id.countries);
-
         return viewGroup;
     }
 }
