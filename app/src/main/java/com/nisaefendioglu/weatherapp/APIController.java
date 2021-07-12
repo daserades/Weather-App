@@ -12,5 +12,5 @@ public interface APIController {
     @GET("find?lat=55.5&lon=37.5&cnt=10&appid=3f8c9db425f5691cb59026f85546237e")
     //Call<List<CountryData>> getCountryData();
 
-    Call<List<CountryData>> getCountryData(@Query("lat") String lat, @Query("lon") String lon, @Query("cnt") String cnt , @Query("APIKey") String apiKey);
+    Call<List<CountryData>> getCountryData(@Query("APIKey") String apiKey);
 }

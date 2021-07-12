@@ -8,9 +8,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 
 
-public class SplashScreen extends Activity {
+public class SplashScreen extends FragmentActivity {
 
     @Override
     protected void onCreate(@Nullable  Bundle savedInstanceState) {
