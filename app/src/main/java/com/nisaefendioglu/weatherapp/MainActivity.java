@@ -5,7 +5,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
 import android.os.Bundle;
 
 import android.util.Log;
@@ -41,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
     TextView country,temp;
     RecyclerView countries;
     ArrayList<CountryData> arrayList = new ArrayList<>();
-    Context context = this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         ApiUtilities.getApiInterface().getCountryData(apikey).enqueue(new Callback<List<CountryData>>(){
-
+            TextView countryName,temperature;
 
             @Override
             public void onResponse(Call<List<CountryData>> call, Response<List<CountryData>> response) {
@@ -61,20 +59,13 @@ public class MainActivity extends AppCompatActivity {
                     RetrofitModel retrofitModel = (RetrofitModel) response.body();
                     double temp = retrofitModel.main.temp - 273.15;
                     int tempToInt = (int) temp;
-                    String country = retrofitModel.sys.country;
-                    for(int i = 0; i <=country.length() ; i++){
-                        arrayList.add();
-                    }
-                    Adapter customAdapter = new Adapter(arrayList,context);
-                    countries.setAdapter(customAdapter);
 
-                    arrayList.add();
+                    String country = retrofitModel.sys.country;
+                    countryName.setText(country);
 
 
                     String temperatures = tempToInt + "°C";
-                    for(int i = 0; i <=country.length() ; i++){
-                        arrayList.add([i]);
-                    }
+                    temperature.setText(temperatures);
 
                 }
 
