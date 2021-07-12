@@ -20,6 +20,7 @@ public class SearchFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         ViewGroup viewGroup = (ViewGroup)inflater.inflate(R.layout.search_layout, container,false);
         TextView country = viewGroup.findViewById(R.id.country);
+        TextView temp = viewGroup.findViewById(R.id.temp);
         TextView back = viewGroup.findViewById(R.id.back);
         return viewGroup;
 
