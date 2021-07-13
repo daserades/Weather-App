@@ -15,6 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class SearchFragment extends Fragment {
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -22,7 +23,9 @@ public class SearchFragment extends Fragment {
         TextView country = viewGroup.findViewById(R.id.country);
         TextView temp = viewGroup.findViewById(R.id.temp);
         TextView back = viewGroup.findViewById(R.id.back);
+
         return viewGroup;
+
 
 
     }

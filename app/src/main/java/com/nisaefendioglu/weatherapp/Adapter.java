@@ -31,7 +31,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.AdapterViewHolder> {
     @Override
     public AdapterViewHolder onCreateViewHolder(@NonNull  ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(context).inflate(R.layout.country_item_layout, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.search_layout, parent, false);
         return new AdapterViewHolder(view);
     }
 

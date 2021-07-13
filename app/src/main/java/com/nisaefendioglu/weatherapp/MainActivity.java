@@ -5,10 +5,12 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,7 +21,10 @@ import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.gson.JsonIOException;
+import com.google.gson.JsonObject;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -35,22 +40,26 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity {
     String apikey = "3f8c9db425f5691cb59026f85546237e";
     private List<CountryData> list;
-    TextInputLayout cityAdd;
     String city;
-    TextView country,temp;
-    RecyclerView countries;
+    Button enterButton;
+    TextView countryMain,tempMain;
     ArrayList<CountryData> arrayList = new ArrayList<>();
+    TextView countryName,temperature;
+    TextInputLayout cityAdd;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        cityAdd = findViewById(R.id.edit_text_city);
-        country = (TextView)findViewById(R.id.country);
-        temp = (TextView)findViewById(R.id.temp);
 
+        countryMain = (TextView)findViewById(R.id.countryMain);
+        tempMain = (TextView)findViewById(R.id.tempMain);
+        enterButton = (Button)findViewById(R.id.enterButton);
+        countryName = (TextView)findViewById(R.id.countryName);
+        temperature = (TextView)findViewById(R.id.temperature);
+        cityAdd = findViewById(R.id.cityAdd);
 
         ApiUtilities.getApiInterface().getCountryData(apikey).enqueue(new Callback<List<CountryData>>(){
-            TextView countryName,temperature;
 
             @Override
             public void onResponse(Call<List<CountryData>> call, Response<List<CountryData>> response) {
@@ -88,27 +97,49 @@ public class MainActivity extends AppCompatActivity {
         SearchFragment searchFragment = new SearchFragment();
         fragmentTransaction.replace(R.id.frameLayout, searchFragment).commit();
 
-        city = cityAdd.getEditText().getText().toString().trim();
-        String url = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+apikey;
-        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, response -> {
-            try {
-                Log.d("Temperature", url);
-                JSONObject object1 = response.getJSONObject("main");
-                String temperature = object1.getString("temp");
-                temp.setText(temperature);
-            } catch (JSONException e) {
-                Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        }, error -> Toast.makeText(MainActivity.this, "Please check the city name", Toast.LENGTH_SHORT).show()
+        enterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        );
-        queue.add(request);
+
+                city = cityAdd.getEditText().getText().toString().trim();
+                String url = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+apikey;
+                RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+                JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new com.android.volley.Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+
+                        try {
+                            Log.d("Temperature",(url));
+                            JSONObject temps = response.getJSONObject("main");
+                            String temperatures = temps.getString("temp");
+                            countryMain.setText(city);
+                            tempMain.setText(temperatures);
+
+
+                        } catch (JSONException e) {
+                            Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+
+                        }
+                    }
+                }, new com.android.volley.Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(MainActivity.this, "Please check the city name", Toast.LENGTH_SHORT).show();
+
+                    }
+                }
+
+                );
+                queue.add(request);
+
+            }
+        });
 
     }
 
 
-    public void temp (View view){
+    public void tempBack (View view){
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
