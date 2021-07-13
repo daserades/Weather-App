@@ -7,7 +7,12 @@
     android:layout_marginHorizontal="8dp"
     android:layout_marginTop="8dp"
     >
-
+    <androidx.fragment.app.FragmentContainerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/fragment_container_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.example.ExampleFragment" >
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
@@ -41,4 +46,5 @@
         android:textSize="15dp" ></TextView>
 
     </RelativeLayout>
+</androidx.fragment.app.FragmentContainerView>
 </com.google.android.material.card.MaterialCardView>

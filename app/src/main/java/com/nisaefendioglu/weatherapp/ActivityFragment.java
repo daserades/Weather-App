@@ -31,12 +31,8 @@ public class ActivityFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        ViewGroup viewGroup = (ViewGroup)inflater.inflate(R.layout.activity_main, container,false);
-
-
-        return viewGroup;
-
-
+        View view = inflater.inflate(R.layout.activity_main, container,false);
+        return view;
 
         }
     }

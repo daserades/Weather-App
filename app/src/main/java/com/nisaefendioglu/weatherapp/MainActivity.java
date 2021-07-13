@@ -1,6 +1,7 @@
 package com.nisaefendioglu.weatherapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
@@ -42,13 +43,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         countryMain = findViewById(R.id.countryMain);
         tempMain = findViewById(R.id.tempMain);
         enterButton = findViewById(R.id.enterButton);
         countryName = findViewById(R.id.countryName);
         temperature = findViewById(R.id.temperature);
         cityAdd = findViewById(R.id.cityAdd);
+
 
         enterButton.setOnClickListener(new View.OnClickListener() {
             @Override
