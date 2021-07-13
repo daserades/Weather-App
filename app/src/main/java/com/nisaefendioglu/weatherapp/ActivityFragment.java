@@ -27,19 +27,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class ActivityFragment extends Fragment {
-    String city;
-    String apikey = "3f8c9db425f5691cb59026f85546237e";
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         ViewGroup viewGroup = (ViewGroup)inflater.inflate(R.layout.activity_main, container,false);
-        ImageView imageView = viewGroup.findViewById(R.id.image);
-        TextView text = viewGroup.findViewById(R.id.text);
-        RecyclerView countries = viewGroup.findViewById(R.id.countries);
-        Button enterButton = viewGroup.findViewById(R.id.enterButton);
-        TextView country = viewGroup.findViewById(R.id.country);
-        TextView temp = viewGroup.findViewById(R.id.temp);
+
 
         return viewGroup;
 

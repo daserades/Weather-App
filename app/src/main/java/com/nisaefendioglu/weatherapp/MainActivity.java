@@ -3,15 +3,11 @@ package com.nisaefendioglu.weatherapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Intent;
 import android.os.Bundle;
 
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,15 +17,11 @@ import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
-import com.google.gson.JsonIOException;
-import com.google.gson.JsonObject;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -39,11 +31,9 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
     String apikey = "3f8c9db425f5691cb59026f85546237e";
-    private List<CountryData> list;
     String city;
     Button enterButton;
     TextView countryMain,tempMain;
-    ArrayList<CountryData> arrayList = new ArrayList<>();
     TextView countryName,temperature;
     TextInputLayout cityAdd;
     double tempNo;
@@ -53,11 +43,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        countryMain = (TextView)findViewById(R.id.countryMain);
-        tempMain = (TextView)findViewById(R.id.tempMain);
-        enterButton = (Button)findViewById(R.id.enterButton);
-        countryName = (TextView)findViewById(R.id.countryName);
-        temperature = (TextView)findViewById(R.id.temperature);
+        countryMain = findViewById(R.id.countryMain);
+        tempMain = findViewById(R.id.tempMain);
+        enterButton = findViewById(R.id.enterButton);
+        countryName = findViewById(R.id.countryName);
+        temperature = findViewById(R.id.temperature);
         cityAdd = findViewById(R.id.cityAdd);
 
         enterButton.setOnClickListener(new View.OnClickListener() {

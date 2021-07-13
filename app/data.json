@@ -1,0 +1,377 @@
+{
+  "message": "accurate",
+  "cod": "200",
+  "count": 10,
+  "list": [
+    {
+      "id": 495260,
+      "name": "Shcherbinka",
+      "coord": {
+        "lat": 55.4997,
+        "lon": 37.5597
+      },
+      "main": {
+        "temp": 304.84,
+        "feels_like": 304.83,
+        "temp_min": 303.73,
+        "temp_max": 306.26,
+        "pressure": 1010,
+        "humidity": 39
+      },
+      "dt": 1626185344,
+      "wind": {
+        "speed": 1.34,
+        "deg": 250
+      },
+      "sys": {
+        "country": "RU"
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "all": 0
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+        }
+      ]
+    },
+    {
+      "id": 564517,
+      "name": "Dubrovitsy",
+      "coord": {
+        "lat": 55.4397,
+        "lon": 37.4867
+      },
+      "main": {
+        "temp": 304.93,
+        "feels_like": 304.95,
+        "temp_min": 303.89,
+        "temp_max": 306.42,
+        "pressure": 1017,
+        "humidity": 39
+      },
+      "dt": 1626185357,
+      "wind": {
+        "speed": 1.34,
+        "deg": 250
+      },
+      "sys": {
+        "country": "RU"
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "all": 0
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+        }
+      ]
+    },
+    {
+      "id": 570578,
+      "name": "Butovo",
+      "coord": {
+        "lat": 55.5483,
+        "lon": 37.5797
+      },
+      "main": {
+        "temp": 304.7,
+        "feels_like": 304.8,
+        "temp_min": 303.6,
+        "temp_max": 306.13,
+        "pressure": 1010,
+        "humidity": 40
+      },
+      "dt": 1626185112,
+      "wind": {
+        "speed": 3,
+        "deg": 250
+      },
+      "sys": {
+        "country": "RU"
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "all": 0
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+        }
+      ]
+    },
+    {
+      "id": 545782,
+      "name": "Kommunarka",
+      "coord": {
+        "lat": 55.5695,
+        "lon": 37.4893
+      },
+      "main": {
+        "temp": 304.62,
+        "feels_like": 304.69,
+        "temp_min": 303.59,
+        "temp_max": 306.12,
+        "pressure": 1011,
+        "humidity": 40
+      },
+      "dt": 1626185356,
+      "wind": {
+        "speed": 3,
+        "deg": 250
+      },
+      "sys": {
+        "country": "RU"
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "all": 0
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+        }
+      ]
+    },
+    {
+      "id": 6417490,
+      "name": "Lesparkkhoz",
+      "coord": {
+        "lat": 55.5431,
+        "lon": 37.6014
+      },
+      "main": {
+        "temp": 304.79,
+        "feels_like": 304.92,
+        "temp_min": 303.68,
+        "temp_max": 306.21,
+        "pressure": 1010,
+        "humidity": 40
+      },
+      "dt": 1626185627,
+      "wind": {
+        "speed": 3,
+        "deg": 250
+      },
+      "sys": {
+        "country": "RU"
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "all": 0
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+        }
+      ]
+    },
+    {
+      "id": 526736,
+      "name": "Sed’moy Mikrorayon",
+      "coord": {
+        "lat": 55.5622,
+        "lon": 37.5797
+      },
+      "main": {
+        "temp": 304.71,
+        "feels_like": 304.81,
+        "temp_min": 303.62,
+        "temp_max": 306.15,
+        "pressure": 1010,
+        "humidity": 40
+      },
+      "dt": 1626185108,
+      "wind": {
+        "speed": 3,
+        "deg": 250
+      },
+      "sys": {
+        "country": "RU"
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "all": 0
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+        }
+      ]
+    },
+    {
+      "id": 473051,
+      "name": "Vlas’yevo",
+      "coord": {
+        "lat": 55.4603,
+        "lon": 37.3794
+      },
+      "main": {
+        "temp": 304.7,
+        "feels_like": 304.8,
+        "temp_min": 303.71,
+        "temp_max": 306.24,
+        "pressure": 1017,
+        "humidity": 40
+      },
+      "dt": 1626185110,
+      "wind": {
+        "speed": 1.34,
+        "deg": 250
+      },
+      "sys": {
+        "country": "RU"
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "all": 0
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+        }
+      ]
+    },
+    {
+      "id": 578680,
+      "name": "Bachurino",
+      "coord": {
+        "lat": 55.58,
+        "lon": 37.52
+      },
+      "main": {
+        "temp": 304.4,
+        "feels_like": 304.39,
+        "temp_min": 303.36,
+        "temp_max": 305.89,
+        "pressure": 1011,
+        "humidity": 40
+      },
+      "dt": 1626185113,
+      "wind": {
+        "speed": 3,
+        "deg": 250
+      },
+      "sys": {
+        "country": "RU"
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "all": 0
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+        }
+      ]
+    },
+    {
+      "id": 554629,
+      "name": "Shestoy Mikrorayon",
+      "coord": {
+        "lat": 55.5667,
+        "lon": 37.5833
+      },
+      "main": {
+        "temp": 304.8,
+        "feels_like": 304.93,
+        "temp_min": 303.7,
+        "temp_max": 306.23,
+        "pressure": 1010,
+        "humidity": 40
+      },
+      "dt": 1626185112,
+      "wind": {
+        "speed": 3,
+        "deg": 250
+      },
+      "sys": {
+        "country": "RU"
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "all": 0
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+        }
+      ]
+    },
+    {
+      "id": 508101,
+      "name": "Podolsk",
+      "coord": {
+        "lat": 55.4242,
+        "lon": 37.5547
+      },
+      "main": {
+        "temp": 304.84,
+        "feels_like": 304.83,
+        "temp_min": 303.78,
+        "temp_max": 306.31,
+        "pressure": 1017,
+        "humidity": 39
+      },
+      "dt": 1626185345,
+      "wind": {
+        "speed": 1.34,
+        "deg": 250
+      },
+      "sys": {
+        "country": "RU"
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "all": 0
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+        }
+      ]
+    }
+  ]
+}
