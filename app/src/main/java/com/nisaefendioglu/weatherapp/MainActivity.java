@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<CountryData> arrayList = new ArrayList<>();
     TextView countryName,temperature;
     TextInputLayout cityAdd;
+    double tempNo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +59,48 @@ public class MainActivity extends AppCompatActivity {
         countryName = (TextView)findViewById(R.id.countryName);
         temperature = (TextView)findViewById(R.id.temperature);
         cityAdd = findViewById(R.id.cityAdd);
+
+        enterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                city = cityAdd.getEditText().getText().toString().trim();
+                String url = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+apikey;
+                RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+                JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new com.android.volley.Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+
+                        try {
+                            Log.d("Temperature",(url));
+
+                            JSONObject temps = response.getJSONObject("main");
+                            tempNo=temps.getInt("temp");
+                            tempNo = tempNo - 273.15;
+                            int tempToInt = (int) tempNo;
+                            countryMain.setText(city.toUpperCase());
+                            tempMain.setText(tempToInt + "°C");
+
+
+                        } catch (JSONException e) {
+                            Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+
+                        }
+                    }
+                }, new com.android.volley.Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(MainActivity.this, "Please check the city name", Toast.LENGTH_SHORT).show();
+
+                    }
+                }
+
+                );
+                queue.add(request);
+
+            }
+        });
+
 
         ApiUtilities.getApiInterface().getCountryData(apikey).enqueue(new Callback<List<CountryData>>(){
 
@@ -97,46 +140,9 @@ public class MainActivity extends AppCompatActivity {
         SearchFragment searchFragment = new SearchFragment();
         fragmentTransaction.replace(R.id.frameLayout, searchFragment).commit();
 
-        enterButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-                city = cityAdd.getEditText().getText().toString().trim();
-                String url = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+apikey;
-                RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-                JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new com.android.volley.Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-
-                        try {
-                            Log.d("Temperature",(url));
-                            JSONObject temps = response.getJSONObject("main");
-                            String temperatures = temps.getString("temp");
-                            countryMain.setText(city);
-                            tempMain.setText(temperatures);
-
-
-                        } catch (JSONException e) {
-                            Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-
-                        }
-                    }
-                }, new com.android.volley.Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(MainActivity.this, "Please check the city name", Toast.LENGTH_SHORT).show();
-
-                    }
-                }
-
-                );
-                queue.add(request);
-
-            }
-        });
 
     }
+
 
 
     public void tempBack (View view){
