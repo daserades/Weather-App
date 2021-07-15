@@ -36,22 +36,13 @@
         tools:layout="@layout/data_fragment"
         android:name="com.nisaefendioglu.weatherapp.DataFragment"/>
 
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:ignore="MissingConstraints"/>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/countries"
             tools:listitem="@layout/country_item_layout"
             app:layoutManager="LinearLayoutManager"
             />
-    </FrameLayout>
+
 </LinearLayout>

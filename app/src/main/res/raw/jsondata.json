@@ -1,0 +1,340 @@
+{
+  "message": "accurate",
+  "cod": "200",
+  "count": 10,
+  "list": [
+    {
+      "id": 738354,
+      "name": "Karaköy",
+      "coord": {
+        "lat": 41.0167,
+        "lon": 28.9667
+      },
+      "main": {
+        "temp": 300.8,
+        "feels_like": 303.04,
+        "temp_min": 300.16,
+        "temp_max": 302.57,
+        "pressure": 1013,
+        "humidity": 69
+      },
+      "dt": 1626260723,
+      "wind": {
+        "speed": 3.6,
+        "deg": 240
+      },
+      "sys": {
+        "country": "TR"
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "all": 40
+      },
+      "weather": [
+        {
+          "id": 802,
+          "main": "Clouds",
+          "description": "scattered clouds",
+          "icon": "03d"
+        }
+      ]
+    },
+    {
+      "id": 745044,
+      "name": "Istanbul",
+      "coord": {
+        "lat": 41.0138,
+        "lon": 28.9497
+      },
+      "main": {
+        "temp": 300.8,
+        "feels_like": 303.04,
+        "temp_min": 300.19,
+        "temp_max": 302.6,
+        "pressure": 1013,
+        "humidity": 69
+      },
+      "dt": 1626260948,
+      "wind": {
+        "speed": 3.6,
+        "deg": 240
+      },
+      "sys": {
+        "country": "TR"
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "all": 40
+      },
+      "weather": [
+        {
+          "id": 802,
+          "main": "Clouds",
+          "description": "scattered clouds",
+          "icon": "03d"
+        }
+      ]
+    },
+    {
+      "id": 747158,
+      "name": "Fatih",
+      "coord": {
+        "lat": 41.0225,
+        "lon": 28.9408
+      },
+      "main": {
+        "temp": 300.66,
+        "feels_like": 302.79,
+        "temp_min": 300.06,
+        "temp_max": 302.47,
+        "pressure": 1013,
+        "humidity": 69
+      },
+      "dt": 1626260724,
+      "wind": {
+        "speed": 3.6,
+        "deg": 240
+      },
+      "sys": {
+        "country": "TR"
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "all": 40
+      },
+      "weather": [
+        {
+          "id": 802,
+          "main": "Clouds",
+          "description": "scattered clouds",
+          "icon": "03d"
+        }
+      ]
+    },
+    {
+      "id": 738329,
+      "name": "Uskudar",
+      "coord": {
+        "lat": 41.0225,
+        "lon": 29.0237
+      },
+      "main": {
+        "temp": 300.84,
+        "feels_like": 303.11,
+        "temp_min": 300.03,
+        "temp_max": 302.44,
+        "pressure": 1013,
+        "humidity": 69
+      },
+      "dt": 1626260723,
+      "wind": {
+        "speed": 3.6,
+        "deg": 240
+      },
+      "sys": {
+        "country": "TR"
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "all": 40
+      },
+      "weather": [
+        {
+          "id": 802,
+          "main": "Clouds",
+          "description": "scattered clouds",
+          "icon": "03d"
+        }
+      ]
+    },
+    {
+      "id": 739887,
+      "name": "Şehremini",
+      "coord": {
+        "lat": 41.0152,
+        "lon": 28.9315
+      },
+      "main": {
+        "temp": 300.6,
+        "feels_like": 302.69,
+        "temp_min": 300.02,
+        "temp_max": 302.44,
+        "pressure": 1013,
+        "humidity": 69
+      },
+      "dt": 1626260724,
+      "wind": {
+        "speed": 3.6,
+        "deg": 240
+      },
+      "sys": {
+        "country": "TR"
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "all": 40
+      },
+      "weather": [
+        {
+          "id": 802,
+          "main": "Clouds",
+          "description": "scattered clouds",
+          "icon": "03d"
+        }
+      ]
+    },
+    {
+      "id": 7732576,
+      "name": "Okmeydanı",
+      "coord": {
+        "lat": 41.0545,
+        "lon": 28.9639
+      },
+      "main": {
+        "temp": 300.37,
+        "feels_like": 302.29,
+        "temp_min": 299.74,
+        "temp_max": 302.16,
+        "pressure": 1013,
+        "humidity": 69
+      },
+      "dt": 1626261273,
+      "wind": {
+        "speed": 3.6,
+        "deg": 240
+      },
+      "sys": {
+        "country": "TR"
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "all": 40
+      },
+      "weather": [
+        {
+          "id": 802,
+          "main": "Clouds",
+          "description": "scattered clouds",
+          "icon": "03d"
+        }
+      ]
+    },
+    {
+      "id": 739549,
+      "name": "Şişli",
+      "coord": {
+        "lat": 41.0605,
+        "lon": 28.9872
+      },
+      "main": {
+        "temp": 300.24,
+        "feels_like": 302.07,
+        "temp_min": 299.58,
+        "temp_max": 301.99,
+        "pressure": 1013,
+        "humidity": 69
+      },
+      "dt": 1626260948,
+      "wind": {
+        "speed": 3.6,
+        "deg": 240
+      },
+      "sys": {
+        "country": "TR"
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "all": 40
+      },
+      "weather": [
+        {
+          "id": 802,
+          "main": "Clouds",
+          "description": "scattered clouds",
+          "icon": "03d"
+        }
+      ]
+    },
+    {
+      "id": 737071,
+      "name": "Zeytinburnu",
+      "coord": {
+        "lat": 40.9944,
+        "lon": 28.9042
+      },
+      "main": {
+        "temp": 300.63,
+        "feels_like": 302.74,
+        "temp_min": 300.08,
+        "temp_max": 302.49,
+        "pressure": 1013,
+        "humidity": 69
+      },
+      "dt": 1626260948,
+      "wind": {
+        "speed": 3.6,
+        "deg": 240
+      },
+      "sys": {
+        "country": "TR"
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "all": 40
+      },
+      "weather": [
+        {
+          "id": 802,
+          "main": "Clouds",
+          "description": "scattered clouds",
+          "icon": "03d"
+        }
+      ]
+    },
+    {
+      "id": 744876,
+      "name": "Kâğıthane",
+      "coord": {
+        "lat": 41.0794,
+        "lon": 28.9647
+      },
+      "main": {
+        "temp": 300.71,
+        "feels_like": 302.88,
+        "temp_min": 300.07,
+        "temp_max": 302.49,
+        "pressure": 1013,
+        "humidity": 69
+      },
+      "dt": 1626260724,
+      "wind": {
+        "speed": 3.6,
+        "deg": 240
+      },
+      "sys": {
+        "country": "TR"
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "all": 40
+      },
+      "weather": [
+        {
+          "id": 802,
+          "main": "Clouds",
+          "description": "scattered clouds",
+          "icon": "03d"
+        }
+      ]
+    }
+  ]
+}

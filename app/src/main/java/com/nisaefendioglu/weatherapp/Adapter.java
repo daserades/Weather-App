@@ -1,63 +1,57 @@
 package com.nisaefendioglu.weatherapp;
 
 import android.content.Context;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.w3c.dom.Text;
-
-import java.text.NumberFormat;
 import java.util.List;
 
-public class Adapter extends RecyclerView.Adapter<Adapter.AdapterViewHolder> {
+
+public class Adapter extends RecyclerView.Adapter<Adapter.AdapterHolder> {
 
     private Context context;
-    private List<CountryData> list;
+    private List<City> cityList;
 
-    public Adapter(Context context, List<CountryData> list) {
+    public Adapter(Context context, List<City> cityList) {
         this.context = context;
-        this.list = list;
+        this.cityList = cityList;
     }
-
 
     @NonNull
     @Override
-    public AdapterViewHolder onCreateViewHolder(@NonNull  ViewGroup parent, int viewType) {
-
-        View view = LayoutInflater.from(context).inflate(R.layout.search_layout, parent, false);
-        return new AdapterViewHolder(view);
+    public AdapterHolder onCreateViewHolder(@NonNull  ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.country_item_layout, parent, false);
+        return new AdapterHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull  Adapter.AdapterViewHolder holder, int position) {
-        CountryData data = list.get(position);
-        holder.countryName.setText(data.getCountry());
-        holder.temperature.setText(NumberFormat.getInstance().format(Integer.parseInt(data.getTemp())));
+    public void onBindViewHolder(@NonNull  Adapter.AdapterHolder holder, int position) {
+        City city = cityList.get(position);
+        holder.countryName.setText(city.getName());
+        holder.temperature.setText(city.getTemp().toString());
+
     }
+
 
     @Override
     public int getItemCount() {
-        return list.size();
+        return cityList.size();
     }
 
-    public class AdapterViewHolder extends RecyclerView.ViewHolder {
+    public class AdapterHolder  extends RecyclerView.ViewHolder{
 
-        private TextView countryName, temperature;
+        TextView countryName,temperature;
 
-        public AdapterViewHolder(@NonNull  View itemView) {
+        public AdapterHolder(@NonNull  View itemView) {
             super(itemView);
 
             countryName = itemView.findViewById(R.id.countryName);
             temperature = itemView.findViewById(R.id.temperature);
         }
     }
-
 }
-
