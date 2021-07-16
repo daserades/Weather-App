@@ -21,6 +21,9 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.textfield.TextInputLayout;
+import com.nisaefendioglu.weatherapp.data.Adapter;
+import com.nisaefendioglu.weatherapp.data.City;
+import com.nisaefendioglu.weatherapp.data.VolleySingleton;
 
 import org.json.JSONArray;
 import org.json.JSONException;

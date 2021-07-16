@@ -1,4 +1,4 @@
-package com.nisaefendioglu.weatherapp;
+package com.nisaefendioglu.weatherapp.data;
 
 import java.util.List;
 

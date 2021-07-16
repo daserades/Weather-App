@@ -1,4 +1,4 @@
-package com.nisaefendioglu.weatherapp;
+package com.nisaefendioglu.weatherapp.data;
 
 public class City {
     private String name;

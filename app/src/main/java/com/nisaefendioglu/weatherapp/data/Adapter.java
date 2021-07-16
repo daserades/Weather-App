@@ -1,4 +1,4 @@
-package com.nisaefendioglu.weatherapp;
+package com.nisaefendioglu.weatherapp.data;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.nisaefendioglu.weatherapp.R;
 
 import java.util.List;
 

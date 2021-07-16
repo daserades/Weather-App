@@ -1,4 +1,6 @@
-package com.nisaefendioglu.weatherapp;
+package com.nisaefendioglu.weatherapp.data;
+
+import com.nisaefendioglu.weatherapp.data.APIController;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;

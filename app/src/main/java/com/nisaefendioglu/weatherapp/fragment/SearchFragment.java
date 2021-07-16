@@ -1,4 +1,4 @@
-package com.nisaefendioglu.weatherapp;
+package com.nisaefendioglu.weatherapp.fragment;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -13,6 +13,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.nisaefendioglu.weatherapp.R;
 
 public class SearchFragment extends Fragment {
 

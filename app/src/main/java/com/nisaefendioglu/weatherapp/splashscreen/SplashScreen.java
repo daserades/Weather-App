@@ -1,4 +1,4 @@
-package com.nisaefendioglu.weatherapp;
+package com.nisaefendioglu.weatherapp.splashscreen;
 
 
 import android.app.Activity;
@@ -10,6 +10,9 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
+
+import com.nisaefendioglu.weatherapp.MainActivity;
+import com.nisaefendioglu.weatherapp.R;
 
 
 public class SplashScreen extends FragmentActivity {
@@ -33,7 +36,7 @@ public class SplashScreen extends FragmentActivity {
             }catch(InterruptedException e){
                 e.printStackTrace();
             }finally{
-                Intent i=new Intent(getApplicationContext(),MainActivity.class);
+                Intent i=new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(i);
                 finish();
             }

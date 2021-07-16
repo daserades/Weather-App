@@ -1,4 +1,4 @@
-package com.nisaefendioglu.weatherapp;
+package com.nisaefendioglu.weatherapp.fragment;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -22,6 +22,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.textfield.TextInputLayout;
+import com.nisaefendioglu.weatherapp.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
