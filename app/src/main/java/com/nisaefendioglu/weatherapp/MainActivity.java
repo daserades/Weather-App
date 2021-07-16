@@ -60,25 +60,36 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-        countryMain = findViewById(R.id.countryMain);
-        tempMain = findViewById(R.id.tempMain);
-        enterButton = findViewById(R.id.enterButton);
-        countryName = findViewById(R.id.countryName);
-        temperature = findViewById(R.id.temperature);
-        cityAdd = findViewById(R.id.cityAdd);
-
-
-        //Recyclerview settings
-        countries = findViewById(R.id.countries);
-        countries.setHasFixedSize(true);
-        countries.setLayoutManager(new LinearLayoutManager(this));
-        cityList = new ArrayList<>();
-
+        define();
+        recyclerViewSettings();
+        onClickEnter();
         requestQueue = VolleySingleton.getmInstance(this).getRequestQueue();
         fetchCity();
 
+    }
+
+        void define(){
+            countryMain = findViewById(R.id.countryMain);
+            tempMain = findViewById(R.id.tempMain);
+            enterButton = findViewById(R.id.enterButton);
+            countryName = findViewById(R.id.countryName);
+            temperature = findViewById(R.id.temperature);
+            cityAdd = findViewById(R.id.cityAdd);
+        }
+
+
+        void recyclerViewSettings() {
+
+            //Recyclerview settings
+            countries = findViewById(R.id.countries);
+            countries.setHasFixedSize(true);
+            countries.setLayoutManager(new LinearLayoutManager(this));
+            cityList = new ArrayList<>();
+        }
+
+
+
+        void onClickEnter(){
         //SEARCH
         enterButton.setOnClickListener(new View.OnClickListener() {
             @Override
