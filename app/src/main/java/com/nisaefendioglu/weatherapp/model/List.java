@@ -14,16 +14,7 @@ public class List {
     @SerializedName("coord")
     @Expose
     private Main main;
-    @SerializedName("dt")
-    @Expose
-    private Integer dt;
-    @SerializedName("wind")
-    @Expose
-    private Object rain;
-    @SerializedName("snow")
-    @Expose
-    private Object snow;
-    @SerializedName("clouds")
+
 
     public Integer getId() {
         return id;
@@ -48,30 +39,6 @@ public class List {
 
     public void setMain(Main main) {
         this.main = main;
-    }
-
-    public Integer getDt() {
-        return dt;
-    }
-
-    public void setDt(Integer dt) {
-        this.dt = dt;
-    }
-
-    public Object getRain() {
-        return rain;
-    }
-
-    public void setRain(Object rain) {
-        this.rain = rain;
-    }
-
-    public Object getSnow() {
-        return snow;
-    }
-
-    public void setSnow(Object snow) {
-        this.snow = snow;
     }
 
 

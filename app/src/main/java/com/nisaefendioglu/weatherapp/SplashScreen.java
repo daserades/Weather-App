@@ -19,24 +19,26 @@ public class SplashScreen extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_screen);
 
+        timeOut();
 
-        Thread timerThread = new Thread(){
-            public void run(){
-                try{
+    }
+    void timeOut(){ Thread timerThread = new Thread(){
+        public void run(){
+            try{
 
-                    synchronized(this){
-                        wait(2000);
-                    }
-
-                }catch(InterruptedException e){
-                    e.printStackTrace();
-                }finally{
-                    Intent i=new Intent(getApplicationContext(),MainActivity.class);
-                    startActivity(i);
-                    finish();
+                synchronized(this){
+                    wait(2000);
                 }
+
+            }catch(InterruptedException e){
+                e.printStackTrace();
+            }finally{
+                Intent i=new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(i);
+                finish();
             }
-        };
+        }
+    };
         timerThread.start();
     }
 }
