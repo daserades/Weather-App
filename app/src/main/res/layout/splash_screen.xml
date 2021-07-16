@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:gravity="center"
-    tools:context=".SplashScreen"
+    tools:context=".splashscreen.SplashScreen"
     android:orientation="vertical"
     android:background="#ff793f">
 

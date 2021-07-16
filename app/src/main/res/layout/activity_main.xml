@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:layout="@layout/search_fragment"
-        android:name="com.nisaefendioglu.weatherapp.SearchFragment"
+        android:name="com.nisaefendioglu.weatherapp.fragment.SearchFragment"
         />
 
     <ImageView
@@ -27,14 +27,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:layout="@layout/header_fragment"
-        android:name="com.nisaefendioglu.weatherapp.HeaderFragment"/>
+        android:name="com.nisaefendioglu.weatherapp.fragment.HeaderFragment"/>
 
     <fragment
         android:id="@+id/DataFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:layout="@layout/data_fragment"
-        android:name="com.nisaefendioglu.weatherapp.DataFragment"/>
+        android:name="com.nisaefendioglu.weatherapp.fragment.DataFragment"/>
 
 
         <androidx.recyclerview.widget.RecyclerView
