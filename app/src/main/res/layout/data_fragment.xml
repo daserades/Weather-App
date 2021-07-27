@@ -6,38 +6,38 @@
     tools:showIn="@layout/activity_main"
     tools:context=".fragment.DataFragment"
     >
-    <RelativeLayout
-        android:id="@+id/activityRelatives"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="12dp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        tools:ignore="MissingConstraints">
-
-        <TextView
-            android:id="@+id/countryMain"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:id="@+id/activityRelatives"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="45dp"
+            android:layout_marginVertical="12dp"
+            android:layout_gravity="center"
             android:gravity="center"
-            android:textColor="@color/black"
-            android:text=""
-            android:textSize="15dp" ></TextView>
+            tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/countryMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="45dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:text=""
+                    android:textSize="15dp" ></TextView>
 
 
-        <TextView
-            android:id="@+id/tempMain"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_alignParentEnd="true"
-            android:gravity="center"
-            android:layout_marginEnd="55dp"
-            android:text=""
-            android:textColor="@color/black"
-            android:textSize="15dp" ></TextView>
+                <TextView
+                    android:id="@+id/tempMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center"
+                    android:layout_marginEnd="55dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="15dp" ></TextView>
 
-    </RelativeLayout>
+        </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
