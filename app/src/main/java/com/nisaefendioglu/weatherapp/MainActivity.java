@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.util.Log;
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     String apikey = "3f8c9db425f5691cb59026f85546237e";
     String city;
     Button enterButton;
-    TextView countryMain,tempMain;
+    TextView countryMain,tempMain, back;
     TextView countryName,temperature;
     TextInputLayout cityAdd;
     double tempNo;
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         define();
         recyclerViewSettings();
         onClickEnter();
+        onClickBack();
         requestQueue = VolleySingleton.getmInstance(this).getRequestQueue();
         fetchCity();
 
@@ -64,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
             countryName = findViewById(R.id.countryName);
             temperature = findViewById(R.id.temperature);
             cityAdd = findViewById(R.id.cityAdd);
+            back = findViewById(R.id.back);
+            back.setVisibility(View.INVISIBLE);
         }
 
 
@@ -78,12 +82,24 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        void onClickBack(){
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                countryMain.setVisibility(View.INVISIBLE);
+                tempMain.setVisibility(View.INVISIBLE);
+                back.setVisibility(View.INVISIBLE);
+            }
+        });
+        }
         void onClickEnter(){
         //SEARCH
         enterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                back.setVisibility(View.VISIBLE);
+                countryMain.setVisibility(View.VISIBLE);
+                tempMain.setVisibility(View.VISIBLE);
                 city = cityAdd.getEditText().getText().toString().trim();
                 String url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apikey;
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
